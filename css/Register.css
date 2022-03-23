@@ -1,0 +1,15 @@
+html,body{
+  margin: 0;
+  height: 100%;
+}
+.wrap-div{
+  margin: 0;
+  height: 100%;
+  background-image: url(../assets/images/backgroud.jpg);
+}
+.main-card{
+  margin-left: 8%;
+    background-color: #EEEEEE;
+    margin-right: 8%;
+    /* margin-bottom: 2%; */
+}
