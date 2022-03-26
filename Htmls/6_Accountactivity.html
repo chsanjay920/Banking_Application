@@ -12,6 +12,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/AccountActivity.css" />
+
 </head>
 
 <body>
@@ -48,24 +49,31 @@
               <input type="radio" class="m-2" name="account" id="account">
               CURRENT ACCOUNT
             </div>
-            <div class="d-flex justify-content-around mt-5">
-              <p class="h5">CLOSING BALANCE: <b> £31,142</b></p>
-              <div class="dropdown">
-                <div class="input-group">
-                  <!-- <select class="custom-select" id="inputGroupSelect04">
-                    <option selected>Choose Dates </option>
-                    <option value="last week">last week</option>
-                    <option value="2">last 2 weeks</option>
-                    <option value="3">last month</option>
-                  </select> -->
-                  <label for="fromDate">From</label>
-                  <input class="mx-3" type="date" name="fromDate"/>
-                  <label for="toDate">To</label>
-                  <input class="mx-3" type="date" name="toDate"/>
-                  <div class="input-group-append mx-2">
+            <div class="d-flex justify-content-around mt-5 row">
+              <div class="col-4">
+                <p class="h5">CLOSING BALANCE: <b> £31,142</b></p>
+              </div>
+              <div class="col-8 row">
+                  <div class="col-3">
+                    <select class="form-select" onchange="hideShowRangePicker(this.value)" >
+                      <option selected>Choose Dates </option>
+                      <option value="last week">last week</option>
+                      <option value="2">last 2 weeks</option>
+                      <option value="3">last month</option>
+                      <option value="4" >Custom Date</option>
+                    </select>
+                  </div>
+                  <div class="datePicker col-7" id="dataPicker" style="display: none;">
+                    <div class="row">
+                      <label class="col-2" for="toDate" style="margin-right: 0%;padding-right: 0%;">From</label>
+                    <input class="col-4 form-control form-control-md" style="width: 150px" type="date" name="toDate"/>
+                    <label class="col-2" for="toDate" style="margin-right: 0%;padding-right: 0%;">To</label>
+                    <input class="col-4 form-control form-control-md" style="width: 150px;" type="date" name="toDate"/>
+                    </div>
+                  </div>
+                  <div class="col-1">
                     <button class="btn btn-outline-primary" type="button">Select</button>
                   </div>
-                </div>
               </div>
             </div>
             <table class="table table-bordered mt-5">
@@ -117,6 +125,16 @@
       </div>
     </div>
   </div>
+  <script>
+    function hideShowRangePicker(e){
+      //dataPicker
+      if(e==4){
+        document.getElementById("dataPicker").style.display="block";
+      }else{
+        document.getElementById("dataPicker").style.display="none";
+      }
+    }
+  </script>
 </body>
 
 </html>
