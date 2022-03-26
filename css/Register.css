@@ -1,15 +1,16 @@
-html,body{
+html,
+body {
   margin: 0;
   height: 100%;
+  background-image: url(../assets/images/back5.jpg);
 }
-.wrap-div{
+.wrap-div {
   margin: 0;
   height: 100%;
-  background-image: url(../assets/images/backgroud.jpg);
+  min-height: 100%;
 }
-.main-card{
+.main-card {
   margin-left: 8%;
-    background-color: #EEEEEE;
-    margin-right: 8%;
-    /* margin-bottom: 2%; */
+  background-color: #eeeeee;
+  margin-right: 8%;
 }
